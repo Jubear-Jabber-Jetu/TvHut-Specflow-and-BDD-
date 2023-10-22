@@ -1,27 +1,27 @@
-﻿Feature: Category Link Verification
+Feature: Category Link Verification
 
-  Scenario: Verify category links navigate to the correct product category page
-    Given the user is on the tvhut.com
-    When the user clicks on the Television category link
-    Then the user should be on the Television category page
+  Scenario: Verify that user can click all the avaliable category through the navigation bar
+    Given Navigate to Tv Hut official page
+    When  Click on Television
+    Then Check that Television is avaliable
 
-    When the user clicks on the Air Conditioner category link
-    Then the user should be on the Air Conditioner category page
+    When Click on the Air Conditioner
+    Then Check that Air conditioner is avaliable
 
-    When the user clicks on the Interactive Flat category link
-    Then the user should be on the Interactive Flat category page
+    When Click on the Interactive Flat
+    Then Check that Interactive Flat is avaliable
 
-    When the user clicks on the Washing Machine category link
-    Then the user should be on the Washing Machine category page
+    When Click on the Washing Machine
+    Then Check that Washing Machine is avaliable
 
-    When the user clicks on the Refrigerator category link
-    Then the user should be on the Refrigerator category page
+    When Click on the Refrigerator
+    Then Check that Refrigerator is avaliable
 
-    When the user clicks on the Audio System category link
-    Then the user should be on the Audio System category page
+    When Click on the Audio System
+    Then Check that Audio System is avaliable
 
-    When the user clicks on the Smart Watch category link
-    Then the user should be on the Smart Watch category page
+    When Click on the Smart Watch
+    Then Check that Smart Watch is avaliable
 
-    When the user clicks on the Router category link
-    Then the user should be on the Router category page
+    When Click on the Router
+    Then Check that Router is avaliable
