@@ -1,9 +1,19 @@
-﻿Feature: Sorting Products
-  As a user,
-  I want to be able to sort products on the website,
-  So that I can easily find the products I'm looking for.
+Feature: Verify Sorting Products
 
-  Scenario: User sorts products by price
-    Given the user is on the product listing page
-    When the user selects Price from the sort options
-    Then the products are displayed in ascending order of price
+  As a user
+  I want to sort products on the website
+  So that I can find the desired products more easily
+
+  Scenario: Verify that an user can sort products perfectly
+    Given Navigate to product listing page
+    When Click on Price ( High > Low )
+    Then Check that displayed options are organized from high to low price
+
+    Then Click on Name ( A - Z )
+    Then Check that displayed options are organized in ascending order
+
+    Then Click on Rate ( Highest )
+    Then Check that displayed options are  the highest rated order
+
+
+ 
