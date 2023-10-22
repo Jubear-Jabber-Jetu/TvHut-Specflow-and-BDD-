@@ -7,120 +7,121 @@ using NUnit.Framework;
 namespace TvHut.StepDefinitions
 {
     [Binding]
-    public class CategoryLinkVerification
+    public class CategoryLinkVerificationStepDefinitions
     {
         private IWebDriver driver;
 
-        public CategoryLinkVerification()
+        public CategoryLinkVerificationStepDefinitions()
         {
             driver = new ChromeDriver();
         }
-        [Given(@"the user is on the tvhut\.com")]
-        public void GivenTheUserIsOnTheTvhut_Com()
+        [Given(@"Navigate to Tv Hut official page")]
+        public void GivenNavigateToTvHutOfficialPage()
         {
             driver.Navigate().GoToUrl("https://www.tvhut.com.bd/");
         }
 
-        [When(@"the user clicks on the Television category link")]
-        public void WhenTheUserClicksOnTheTelevisionCategoryLink()
+        [When(@"Click on Television")]
+        public void WhenClickOnTelevision()
         {
             driver.FindElement(By.XPath("//img[@alt='Television']")).Click();
         }
 
-        [Then(@"the user should be on the Television category page")]
-        public void ThenTheUserShouldBeOnTheTelevisionCategoryPage()
+        [Then(@"Check that Television is avaliable")]
+        public void ThenCheckThatTelevisionIsAvaliable()
         {
             Assert.IsTrue(driver.Url.Contains("https://www.tvhut.com.bd/smart-tv"));
         }
 
-        [When(@"the user clicks on the Air Conditioner category link")]
-        public void WhenTheUserClicksOnTheAirConditionerCategoryLink()
+        [When(@"Click on the Air Conditioner")]
+        public void WhenClickOnTheAirConditioner()
         {
             driver.Navigate().GoToUrl("https://www.tvhut.com.bd/");
             driver.FindElement(By.XPath("//a[@class='info-block']//img[@alt='Air Conditioner']")).Click();
         }
 
-        [Then(@"the user should be on the Air Conditioner category page")]
-        public void ThenTheUserShouldBeOnTheAirConditionerCategoryPage()
+        [Then(@"Check that Air conditioner is avaliable")]
+        public void ThenCheckThatAirConditionerIsAvaliable()
         {
+
             Assert.IsTrue(driver.Url.Contains("https://www.tvhut.com.bd/air-conditioner"));
         }
 
-        [When(@"the user clicks on the Interactive Flat category link")]
-        public void WhenTheUserClicksOnTheInteractiveFlatCategoryLink()
+        [When(@"Click on the Interactive Flat")]
+        public void WhenClickOnTheInteractiveFlat()
         {
             driver.Navigate().GoToUrl("https://www.tvhut.com.bd/");
             driver.FindElement(By.XPath("//img[@alt='Interactive Flat']")).Click();
         }
 
-        [Then(@"the user should be on the Interactive Flat category page")]
-        public void ThenTheUserShouldBeOnTheInteractiveFlatCategoryPage()
+        [Then(@"Check that Interactive Flat is avaliable")]
+        public void ThenCheckThatInteractiveFlatIsAvaliable()
         {
             Assert.IsTrue(driver.Url.Contains("https://www.tvhut.com.bd/interactive-flat-panel-display"));
         }
 
-        [When(@"the user clicks on the Washing Machine category link")]
-        public void WhenTheUserClicksOnTheWashingMachineCategoryLink()
+        [When(@"Click on the Washing Machine")]
+        public void WhenClickOnTheWashingMachine()
         {
             driver.Navigate().GoToUrl("https://www.tvhut.com.bd/");
             driver.FindElement(By.XPath("//a[@class='info-block']//img[@alt='Washing Machine']")).Click();
         }
 
-        [Then(@"the user should be on the Washing Machine category page")]
-        public void ThenTheUserShouldBeOnTheWashingMachineCategoryPage()
+
+        [Then(@"Check that Washing Machine is avaliable")]
+        public void ThenCheckThatWashingMachineIsAvaliable()
         {
-            Assert.IsTrue(driver.Url.Contains(""));
+            Assert.IsTrue(driver.Url.Contains("https://www.tvhut.com.bd/washing-machine"));
         }
 
-        [When(@"the user clicks on the Refrigerator category link")]
-        public void WhenTheUserClicksOnTheRefrigeratorCategoryLink()
+
+        [When(@"Click on the Refrigerator")]
+        public void WhenClickOnTheRefrigerator()
         {
             driver.Navigate().GoToUrl("https://www.tvhut.com.bd/");
             driver.FindElement(By.XPath("//div[@class='info-block-title'][normalize-space()='Refrigerator']")).Click();
         }
 
-        [Then(@"the user should be on the Refrigerator category page")]
-        public void ThenTheUserShouldBeOnTheRefrigeratorCategoryPage()
+        [Then(@"Check that Refrigerator is avaliable")]
+        public void ThenCheckThatRefrigeratorIsAvaliable()
         {
-            Assert.IsTrue(driver.Url.Contains(""));
+            Assert.IsTrue(driver.Url.Contains("https://www.tvhut.com.bd/refrigerator"));
         }
 
-        [When(@"the user clicks on the Audio System category link")]
-        public void WhenTheUserClicksOnTheAudioSystemCategoryLink()
+        [When(@"Click on the Audio System")]
+        public void WhenClickOnTheAudioSystem()
         {
             driver.Navigate().GoToUrl("https://www.tvhut.com.bd/");
             driver.FindElement(By.XPath("//div[@class='module-item module-item-6 info-blocks info-blocks-image']//a[@class='info-block']")).Click();
         }
 
-        [Then(@"the user should be on the Audio System category page")]
-        public void ThenTheUserShouldBeOnTheAudioSystemCategoryPage()
+        [Then(@"Check that Audio System is avaliable")]
+        public void ThenCheckThatAudioSystemIsAvaliable()
         {
             Assert.IsTrue(driver.Url.Contains("https://www.tvhut.com.bd/speakers"));
         }
 
-        [When(@"the user clicks on the Smart Watch category link")]
-        public void WhenTheUserClicksOnTheSmartWatchCategoryLink()
+        [When(@"Click on the Smart Watch")]
+        public void WhenClickOnTheSmartWatch()
         {
             driver.Navigate().GoToUrl("https://www.tvhut.com.bd/");
             driver.FindElement(By.XPath("//a[@class='info-block']//img[@alt='Smart Watch']")).Click();
         }
 
-        [Then(@"the user should be on the Smart Watch category page")]
-        public void ThenTheUserShouldBeOnTheSmartWatchCategoryPage()
+        [Then(@"Check that Smart Watch is avaliable")]
+        public void ThenCheckThatSmartWatchIsAvaliable()
         {
-        https://www.tvhut.com.bd/smart-watch
             Assert.IsTrue(driver.Url.Contains("https://www.tvhut.com.bd/smart-watch"));
         }
-
-        [When(@"the user clicks on the Router category link")]
-        public void WhenTheUserClicksOnTheRouterCategoryLink()
+        [When(@"Click on the Router")]
+        public void WhenClickOnTheRouter()
         {
             driver.Navigate().GoToUrl("https://www.tvhut.com.bd/");
             driver.FindElement(By.XPath("//img[@alt='Router']")).Click();
         }
 
-        [Then(@"the user should be on the Router category page")]
-        public void ThenTheUserShouldBeOnTheRouterCategoryPage()
+        [Then(@"Check that Router is avaliable")]
+        public void ThenCheckThatRouterIsAvaliable()
         {
             Assert.IsTrue(driver.Url.Contains("https://www.tvhut.com.bd/router"));
             driver.Quit();
